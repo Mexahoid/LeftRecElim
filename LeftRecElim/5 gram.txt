@@ -1,0 +1,4 @@
+a,b,c,d
+S,A
+S->SaA|AA|b
+A->ASa|Ad|c

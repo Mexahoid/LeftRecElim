@@ -1,0 +1,58 @@
+﻿<Window x:Class="LeftRecElim.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LeftRecElim"
+        mc:Ignorable="d"
+        Title="Исключение левой рекурсии" Height="450" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">
+            9.	Исключите левую рекурсию из контекстно-свободной грамматики G = (Vt, Vn, P, S)
+            </TextBlock>
+
+            <Button Grid.Column="1" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="3" Click="LoadButton_Click">Загрузить</Button>
+
+
+
+        </Grid>
+
+        <Button Grid.Row="2" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="3" Click="StartButton_Click">Жмакни меня</Button>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="90*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Vt</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Vn</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">P (правила)</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Правила без рекурсии</TextBlock>
+
+
+            <TextBox Grid.Row="1" Grid.Column="0" Name="VtTextBox" Margin="10" FontSize="17" AcceptsReturn="True" Text="ϵ"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Name="VnTextBox" Margin="10" FontSize="17"  AcceptsReturn="True"/>
+            <TextBox Grid.Row="1" Grid.Column="2" Name="PTextBox" Margin="10" FontSize="17" AcceptsReturn="True"/>
+            <TextBox Grid.Row="1" Grid.Column="3" Name="RTextBox" Margin="10" FontSize="17" AcceptsReturn="True" IsReadOnly="True"/>
+        </Grid>
+    </Grid>
+</Window>
